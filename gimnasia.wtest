@@ -49,7 +49,17 @@ test "remar en el delta 90 minutos intensidad 1.3, quema 9360 calorias" {
 }
 test "remar en camino remeros 5 minutos intensidad 1.7, quema 510 calorias" { 
 	const remarEnCaminoRemeros = new RemoDeCompeticion(tiempo = 5)
-	
+	remarEnCaminoRemeros.descansar()
+	assert.equals(2, remarEnCaminoRemeros.descanso())
+	remarEnCaminoRemeros.practicarRutina()
+	assert.equals(510, remarEnCaminoRemeros.caloriasQuemadas())
+}
+test "remar en camino remeros 90 minutos intensidad 1.7, quema 12750 calorias" { 
+	const remarEnCaminoRemeros = new RemoDeCompeticion(tiempo = 90)
+	remarEnCaminoRemeros.descansar()
+	assert.equals(15, remarEnCaminoRemeros.descanso())
+	remarEnCaminoRemeros.practicarRutina()
+	assert.equals(12750, remarEnCaminoRemeros.caloriasQuemadas())
 }
 
 //Punto 2: personas

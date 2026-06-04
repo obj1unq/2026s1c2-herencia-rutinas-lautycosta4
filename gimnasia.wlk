@@ -44,6 +44,8 @@ class RemoDeCompeticion inherits Remo(intensidad = 1.7) {
     self.restarDescanso()
   }
   method restarDescanso() {
-    descanso = 0.max(descanso - 3) //arreglar
+    descanso = (descanso - 3).max(2) 
   }
+
+  
 }
