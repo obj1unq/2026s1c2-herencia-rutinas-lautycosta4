@@ -6,6 +6,7 @@ class Rutina{
     method practicarRutina() {
       caloriasQuemadas =  100 * (tiempo - descanso) * intensidad
     }
+
 }
 
 class Running inherits Rutina {
