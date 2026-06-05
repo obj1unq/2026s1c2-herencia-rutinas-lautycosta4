@@ -11,10 +11,19 @@ class Persona{
          rutina.descansar()
          rutina.practicarRutina()
 
-           }
+        }
+
     method pesoPerdido() { return 
     rutina.caloriasQuemadas() / kilosPorCaloria
-    }       
+    }
+    
+    //esta bien??
+    method caloriasQueQuemaria(otraRutina){
+        otraRutina.tiempo(tiempoDeEjercicio)
+        otraRutina.descansar()
+        otraRutina.practicarRutina()
+        return otraRutina.caloriasQuemadas()
+    }
 }
 
 class PersonaSedentaria inherits Persona(kilosPorCaloria = 7000) {
